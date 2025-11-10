@@ -1,7 +1,7 @@
-const calcTitle = document.getElementById("calcTitle");
-calcTitle.append("Mi Calculadora");
+const calcTitle = document.getElementById("calcTitle"); // Crear un titulo
+calcTitle.append("Mi Calculadora"); // Asignarle el nombre
 
-const display = document.getElementById("display");
+const display = document.getElementById("display"); // crear una variable a partir del Id de Html display, donde se muestra los numeros
 
 function appendToDisplay(input) {
     display.value += input;
@@ -13,17 +13,20 @@ function clearDisplay() {
 
 
 function deleteLast() {
-    if (display.value.lenght > 1) {
+    if (display.value.length > 1) {
         display.value = display.value.slice(0, -1);
     }
     else {
-        display.value = "0";
+        display.value = "";
     }
 };
-function caclculate() {
+function calculate() {
     try {
         display.value = eval(display.value);
     } catch (error) {
-        display.value("Error")
+        display.value = "Error";
     }
 };
+
+const footer_container = document.getElementById("footer_container");
+footer_container.append("@ 2025 - German Gibbs");
